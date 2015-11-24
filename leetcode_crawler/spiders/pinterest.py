@@ -13,7 +13,7 @@ class LoginSpider(BaseSpider):
                   'Mobile/9A334 Safari/7534.48.3')
 
     def parse(self, response):
-        data = {'email': 'willran168@gmail.com', 'password': 'Cecilia1'}
+        data = {'email': 'willran168@gmail.com', 'password': 'xxxxxxxxxxxxxxxxxxxxx'}
         # no need for dont_filter
         return FormRequest.from_response(response, formdata=data, 
             callback=self.after_login)
