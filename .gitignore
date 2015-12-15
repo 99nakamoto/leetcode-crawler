@@ -1,17 +1,5 @@
-/.vagrant
-/scrapy.iml
+.DS_Store
 *.pyc
-_trial_temp*
-dropin.cache
-docs/build
-*egg-info
-.tox
-venv
+*.egg-info
 build
-dist
-.idea
-
-# Windows
-Thumbs.db
-
-*.html
+setup.py
