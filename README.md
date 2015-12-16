@@ -1,5 +1,6 @@
 # leetcode-crawler
-Simple web crawler that download all unlocked questions from leetcode.com 
+
+Web crawler that download unlocked questions from leetcode.com 
 
 ## How to setup
 
@@ -14,7 +15,7 @@ Modify the file: __settings.py__
 
 	DOWNLOAD_DELAY=0
 
-Change the value to 3 (recommended 3 seconds break between each crawl).
+Change the value to 3 (recommended 3~10 seconds cooldown between each crawl).
 
 ## How to use
 
@@ -22,6 +23,4 @@ Go to main project directory and execute the following command:
 
     scrapy crawl leetcode
 
-If you use IPython, I suggest you execute: 
-
-    !cls && scrapy crawl leetcode
+or execute with -o for an output file. 
