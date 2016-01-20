@@ -26,15 +26,16 @@ class LeetcodeSpider(CrawlSpider):
         self.logger.info('now parsing the list: %s', response.url)
         # we check problem index range in here
         for trElement in response.xpath('//tbody[@class="reactable-data"]/tr'):
-            # for each question, I get its ID and URL
-            # ID might be checked against some predefined range, and also
-            # IDs are passed to callback as a parameter, reason being taht
-            # the actually content page does not show a ID number.
-            qIndex = trElement.xpath('td[2]/text()').extract()[0]
+            # The ID of each question is checked against some predefined range
+            # IDs are passed to callback as parameter, because
+            # the item page does not show a ID number
             qUrl = trElement.xpath('td[3]/a/@href').extract()[0]
+            qIndex = trElement.xpath('td[2]/text()').extract()[0]
 
-            request = Request("https://leetcode.com" + qUrl,
-                            callback=self.parse_item)
+            request = Request(
+                "https://leetcode.com" + qUrl,
+                callback=self.parse_item
+                )
             request.meta['qIndex'] = int(qIndex)
             yield request
 
