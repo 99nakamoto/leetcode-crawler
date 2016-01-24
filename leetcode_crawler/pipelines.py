@@ -1,10 +1,5 @@
 # -*- coding: utf-8 -*-
 
-# Define your item pipelines here
-#
-# Don't forget to add your pipeline to the ITEM_PIPELINES setting
-# See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
-
 class LeetcodeCrawlerPipeline(object):
     def process_item(self, item, spider):
 
@@ -27,7 +22,7 @@ class LeetcodeCrawlerPipeline(object):
         file_.write("<div style=\"font-family: Andale Mono, monospace\">")
         for line in item['content']:
             # if this line says: Subscribe to see which companies asked this question
-            # skip this line 
+            # skip this line
             if "to see which companies asked this question" in line:
                 continue
             # convert all urls to absolute. there are cases like this:
@@ -40,4 +35,19 @@ class LeetcodeCrawlerPipeline(object):
 
         file_.close()
 
+        return item
+
+
+class MongodbPipeline(object):
+
+    def __init__(self):
+        if (settings['SAVE_TO_MONGODB']):
+            connection = pymongo.MongoClient(
+                settings['MONGODB_SERVER'],
+                settings['MONGODB_PORT']
+            )
+            db = connection[settings['MONGODB_DB']]
+            self.collection = db[settings['MONGODB_COLLECTION']]
+
+    def process_item(self, item, spider):
         return item
