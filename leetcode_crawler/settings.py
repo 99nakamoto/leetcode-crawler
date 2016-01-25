@@ -21,8 +21,10 @@ DOWNLOAD_DELAY=0
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
+# smaller is higher priority
 ITEM_PIPELINES = {
    'leetcode_crawler.pipelines.LeetcodeCrawlerPipeline': 300,
+   'leetcode_crawler.pipelines.MongodbPipeline': 900,
 }
 
 MONGODB_SERVER = "45.54.133.34"
