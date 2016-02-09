@@ -24,3 +24,9 @@ Go to main project directory and execute the following command:
     scrapy crawl leetcode
 
 or execute with -o for an output file. 
+
+# Save to MongoDB
+
+The result of the crawler can be saved to MongoDB for universal access. I use a pipeline to achieve this. 
+
+See pipeline.py
