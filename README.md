@@ -27,6 +27,6 @@ or execute with -o for an output file.
 
 # Save to MongoDB
 
-The result of the crawler can be saved to MongoDB for universal access. I use a pipeline to achieve this. 
+The result of the crawler can be (optionally) saved to MongoDB by setting SAVE_TO_MONGODB to 1. 
 
-See pipeline.py
+The pipeline.py is used to do the connection + save the data. 
