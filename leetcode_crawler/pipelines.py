@@ -50,8 +50,11 @@ class MongodbPipeline(object):
             self.collection = db[settings['MONGODB_COLLECTION']]
 
     def process_item(self, item, spider):
-        self.collection.update(
-            {'title': item['title']},
-            dict(item), upsert=True
-        )
-        return item
+        if (settings['SAVE_TO_MONGODB']):
+            self.collection.update(
+                {'title': item['title']},
+                dict(item), upsert=True
+            )
+            return item
+        else:
+            return item
