@@ -17,21 +17,20 @@ class LeetcodeSpider(CrawlSpider):
 
     def start_requests(self):
         URL = "https://leetcode.com/problemset/algorithms/"
-        self.logger.info('start request at: %s', URL)
         # todo: did not do login here
+        self.logger.info('start request at: %s', URL)
 
         yield Request(URL, self.parse_list)
 
     def parse_list(self, response):
-        self.logger.info('now parsing the list: %s', response.url)
         # we check problem index range in here
         for trElement in response.xpath('//tbody[@class="reactable-data"]/tr'):
             # The ID of each question is checked against some predefined range
-            # IDs are passed to callback as parameter, because
-            # the item page does not show a ID number
+            # IDs are passed to callback as parameter, because item page does not contain ID number
             qUrl = trElement.xpath('td[3]/a/@href').extract()[0]
             qIndex = trElement.xpath('td[2]/text()').extract()[0]
 
+            # TODO, there should be a better way to construct this url
             request = Request(
                 "https://leetcode.com" + qUrl,
                 callback=self.parse_item
