@@ -27,3 +27,6 @@ MONGODB_DB = "leetcode_crawler"
 MONGODB_COLLECTION = "questions_collection"
 
 SAVE_TO_MONGODB = 1
+
+LEETCODE_USERNAME = ''
+LEETCODE_PASSPORT = ''

@@ -17,7 +17,7 @@ class LeetcodeSpider(CrawlSpider):
 
     def start_requests(self):
         URL = "https://leetcode.com/problemset/algorithms/"
-        # todo: did not do login here
+        # TODO: login my leetcode account here
         self.logger.info('start request at: %s', URL)
 
         yield Request(URL, self.parse_list)
@@ -45,8 +45,8 @@ class LeetcodeSpider(CrawlSpider):
         item['link'] = response.url
         item['content'] = response.xpath('//div[@class="question-content"]/*').extract()
 
-        # there are somecases that page don't load when not logged in
-        # omit these pages for now
+        # temporarily omit the pages that need login
+        # TODO: login my leetcode account here
         if not item['content']:
             return
         item['title'] = response.xpath('//div[@class="question-title"]/h3/text()').extract()[0]
