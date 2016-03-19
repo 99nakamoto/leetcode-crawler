@@ -23,6 +23,3 @@ ITEM_PIPELINES = {
    'leetcode_crawler.pipelines.LeetcodeCrawlerPipeline': 300,
    'leetcode_crawler.pipelines.MongodbPipeline': 900,
 }
-
-SAVE_TO_MONGODB = 1
-
