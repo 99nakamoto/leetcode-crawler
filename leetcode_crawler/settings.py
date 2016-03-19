@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from local_setting import *
+from setting_local import *
 
 
 BOT_NAME = 'leetcode_crawler'
