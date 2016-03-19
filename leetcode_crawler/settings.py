@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 
+from local_setting import *
+
+
 BOT_NAME = 'leetcode_crawler'
 
 SPIDER_MODULES = ['leetcode_crawler.spiders']
@@ -21,9 +24,5 @@ ITEM_PIPELINES = {
    'leetcode_crawler.pipelines.MongodbPipeline': 900,
 }
 
-MONGODB_SERVER = "45.54.133.34"
-MONGODB_PORT = 27017
-MONGODB_DB = "leetcode_crawler"
-MONGODB_COLLECTION = "questions_collection"
-
 SAVE_TO_MONGODB = 1
+
