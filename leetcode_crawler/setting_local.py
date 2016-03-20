@@ -1,7 +1,6 @@
-MONGODB_SERVER = "45.54.133.34"
+MONGODB_SERVER = "45.55.102.45"
 MONGODB_PORT = 27017
-MONGODB_DB = "leetcode_crawler"
-MONGODB_COLLECTION = "questions_collection"
+MONGODB_DB = "leetcode"
+MONGODB_COLLECTION = "questions"
 
 SAVE_TO_MONGODB = 1
-
