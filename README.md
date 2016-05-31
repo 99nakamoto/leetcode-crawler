@@ -1,6 +1,6 @@
 # leetcode-crawler
 
-Web crawler that download unlocked questions from leetcode.com 
+Web crawler that download unlocked questions from www.leetcode.com
 
 ## How to setup
 
@@ -15,7 +15,7 @@ Modify the file: __settings.py__
 
 	DOWNLOAD_DELAY=0
 
-Change the value to 3 (recommended 3~10 seconds cooldown between each crawl).
+Change the value to 5 (recommended 5~10 seconds cooldown between each crawl).
 
 ## How to use
 
