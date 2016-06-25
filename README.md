@@ -1,4 +1,6 @@
-[This crawler is not under maintainance]
+# This crawler is not under maintainance
+
+As of June 26, 2016, this crawler is no longer working. 
 
 # leetcode-crawler
 
