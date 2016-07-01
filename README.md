@@ -1,8 +1,12 @@
 # This crawler is not under maintainance
 
-As of June 26, 2016, this crawler is no longer functionaling. 
+As of July 2nd, 2016, this crawler is no longer under maintainance. 
 
-Because leetcode changed their website structure, this crawler is no longer working.
+Now that leetcode is no longer returning a static website, but instead, most of the conent is rendered at real time. One solution is to set GET request to:
+
+https://leetcode.com/api/problems/algorithms/
+
+to get a json file containing 
 
 # leetcode-crawler
 
