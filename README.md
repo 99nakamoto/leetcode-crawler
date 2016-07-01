@@ -6,7 +6,9 @@ Now that leetcode is no longer returning a static website, but instead, most of 
 
 https://leetcode.com/api/problems/algorithms/
 
-to get a json file containing 
+to get a json file containing a list of questions. 
+
+If you have done this, another leetcode crawler, let me know and I'm happy to learn. 
 
 # leetcode-crawler
 
