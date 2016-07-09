@@ -1,14 +1,14 @@
 # This crawler is not under maintainance
 
-As of July 2nd, 2016, this crawler is no longer under maintainance. 
+This crawler is no longer under active maintainance. And it may not be working any more. 
 
-Now that leetcode is no longer returning a static website, but instead, most of the conent is rendered at real time. One solution is to set GET request to:
-
-https://leetcode.com/api/problems/algorithms/
-
-to get a json file containing a list of questions. 
+Leetcode is no longer returning a static website, but instead, most of the conent is rendered at real time. 
 
 If you have done this, another leetcode crawler, let me know and I'm happy to learn. 
+
+# Note
+
+[The below content is deprecated]
 
 # leetcode-crawler
 
