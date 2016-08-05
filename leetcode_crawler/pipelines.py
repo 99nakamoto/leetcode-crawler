@@ -39,25 +39,3 @@ class LeetcodeCrawlerPipeline(object):
         file_.close()
 
         return item
-
-class MongodbPipeline(object):
-
-    def __init__(self):
-        if (settings['SAVE_TO_MONGODB']):
-            connection = pymongo.MongoClient(
-                settings['MONGODB_SERVER'],
-                settings['MONGODB_PORT']
-            )
-            db = connection[settings['MONGODB_DB']]
-            self.collection = db[settings['MONGODB_COLLECTION']]
-
-    def process_item(self, item, spider):
-        if (settings['SAVE_TO_MONGODB']):
-            self.collection.update(
-                {'title': item['title']},
-                dict(item), upsert=True
-            )
-
-            return item
-        else:
-            return item

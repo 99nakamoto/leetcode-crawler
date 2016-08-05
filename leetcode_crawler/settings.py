@@ -13,7 +13,6 @@ NEWSPIDER_MODULE = 'leetcode_crawler.spiders'
 # smaller is higher priority
 ITEM_PIPELINES = {
    'leetcode_crawler.pipelines.LeetcodeCrawlerPipeline': 300,
-   'leetcode_crawler.pipelines.MongodbPipeline': 900,
 }
 
 # Configure a delay for requests for the same website (default: 0)
