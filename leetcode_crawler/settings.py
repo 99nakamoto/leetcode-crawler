@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+# [deprecated]
 from setting_local import *
 
 

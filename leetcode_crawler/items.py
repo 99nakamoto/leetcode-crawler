@@ -7,6 +7,8 @@
 
 from scrapy.item import Item, Field
 
+
+# [deprecated]
 class QuestionItem(Item):
 
     index = Field()

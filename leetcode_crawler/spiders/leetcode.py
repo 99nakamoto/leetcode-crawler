@@ -7,11 +7,8 @@ from leetcode_crawler.items import QuestionItem
 
 import requests
 
-# leetcode login
-# username3
-# password3
-# email@email.com
 
+# [deprecated]
 class LeetcodeSpider(CrawlSpider):
     name = "leetcode"
 

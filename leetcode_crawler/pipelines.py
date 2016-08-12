@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+
+# [deprecated]
 class LeetcodeCrawlerPipeline(object):
     def process_item(self, item, spider):
 
